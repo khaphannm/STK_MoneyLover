@@ -1,0 +1,62 @@
+D:\Kiểm Định Chất Lượng\STK\STK\bin\Debug\STK.exe
+D:\Kiểm Định Chất Lượng\STK\STK\bin\Debug\STK.exe.config
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.FrmAddEditSTK.resources
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.FrmDSSTK.resources
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.frmLogin.resources
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.frmMain.resources
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.FrmAddBank.resources
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.FrmSig.resources
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.FRMThemSTK.resources
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.Properties.Resources.resources
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.csproj.GenerateResource.Cache
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.exe
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.pdb
+D:\Kiểm Định Chất Lượng\STK\STK\bin\Debug\STK.pdb
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.csprojResolveAssemblyReference.cache
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.FrmGuiThem.resources
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.fmrXN.resources
+D:\Kiểm Định Chất Lượng\STK\STK\obj\Debug\STK.FrmRut1Phan.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\bin\Debug\STK.exe.config
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\bin\Debug\STK.exe
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\bin\Debug\STK.pdb
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.csprojAssemblyReference.cache
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.fmrXN.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.FrmAddEditSTK.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.FrmDSSTK.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.FrmGuiThem.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.frmLogin.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.frmMain.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.FrmAddBank.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.FrmRut1Phan.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.FrmSig.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.FRMThemSTK.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.Properties.Resources.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.csproj.GenerateResource.cache
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.csproj.CoreCompileInputs.cache
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.exe
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.pdb
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\bin\Debug\Dapper.dll
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\bin\Debug\Dapper.xml
+C:\Users\Minh Kha\Desktop\C#Project\Repository\MoneyLover_STK\STK_1410\STK\obj\Debug\STK.csproj.CopyComplete
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\bin\Debug\STK.exe.config
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\bin\Debug\STK.exe
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\bin\Debug\STK.pdb
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\bin\Debug\Dapper.dll
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\bin\Debug\Dapper.xml
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.csprojAssemblyReference.cache
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.fmrXN.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.FrmAddEditSTK.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.FrmDSSTK.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.FrmGuiThem.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.frmLogin.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.frmMain.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.FrmAddBank.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.FrmRut1Phan.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.FrmSig.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.FRMThemSTK.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.Properties.Resources.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.csproj.GenerateResource.cache
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.csproj.CoreCompileInputs.cache
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.csproj.CopyComplete
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.exe
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_Bitbucket\STK\obj\Debug\STK.pdb
