@@ -16,7 +16,7 @@ namespace STK
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDSSTK());
+            Application.Run(new frmMain());
         }
     }
 }

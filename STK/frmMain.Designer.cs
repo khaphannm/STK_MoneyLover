@@ -41,9 +41,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(17, 223);
+            this.label1.Location = new System.Drawing.Point(26, 343);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 32);
+            this.label1.Size = new System.Drawing.Size(363, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lên kế hoạch tài chính thông minh và từng bước \r\n                     tiết kiệm đ" +
     "ể hiện thực hóa.";
@@ -55,9 +56,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Green;
-            this.button1.Location = new System.Drawing.Point(12, 281);
+            this.button1.Location = new System.Drawing.Point(18, 432);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 31);
+            this.button1.Size = new System.Drawing.Size(376, 48);
             this.button1.TabIndex = 1;
             this.button1.Text = "LẦN ĐẦU SỬ DỤNG MONEY LOVER";
             this.button1.UseVisualStyleBackColor = false;
@@ -73,9 +75,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(12, 327);
+            this.button2.Location = new System.Drawing.Point(18, 503);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(251, 34);
+            this.button2.Size = new System.Drawing.Size(376, 52);
             this.button2.TabIndex = 2;
             this.button2.Text = "ĐÃ SỬ DỤNG MONEY LOVER";
             this.button2.UseVisualStyleBackColor = false;
@@ -86,27 +89,29 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 186);
+            this.pictureBox1.Size = new System.Drawing.Size(376, 286);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
-            this.ClientSize = new System.Drawing.Size(275, 377);
+            this.ClientSize = new System.Drawing.Size(412, 580);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Ứng dụng quản lý sổ tiết kiệm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

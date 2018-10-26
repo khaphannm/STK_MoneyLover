@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using Dapper;
 using STK.Entity;
 using System.Collections;
+using STK.ViewModels;
 
 namespace STK
 {
@@ -27,6 +28,10 @@ namespace STK
         public SqlConnection Kn()
         {
             return Utilities.getConnect();
+        }
+        void ShouldUpdateMoney()
+        {
+
         }
         public void KetNoiCSDL()
         {
@@ -105,39 +110,23 @@ namespace STK
         }
         void KetNoiCSDLTatToan()
         {
-            List<NganHang> list = new List<NganHang>();
-            SqlConnection cnn = Kn();
-            string sql1 = "SELECT t.ID , t.MaSo , t.SoTienGui ,t.KyHan,t.NgayGui, t.LaiSuat, n.TenNganHang, n.MaNganHang FROM TheTietKiem t, NganHang n Where Email = '" + lbnGetEmail.Text + 
+            string sql = "SELECT t.ID , t.MaSo , t.SoTienGui ,t.KyHan,t.NgayGui, t.LaiSuat FROM TheTietKiem t, NganHang n Where Email = '" + lbnGetEmail.Text + 
                 "' and TatToan = 1 and t.MaNganHang = n.MaNganHang";
-            cnn.Open();
-            SqlCommand com = new SqlCommand(sql1, cnn);
-            com.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(com);
-            DataTable dt = new DataTable();
-            da.Fill(dt);  // đổ dữ liệu vào kho
-            cnn.Close();  // đóng kết nối
-            dataGridView2.DataSource = dt; 
+            using (var connection = Kn())
+            {
+                var theTietKiems = connection.QueryAsync<TheTietKiemViewModel>(sql).Result.ToList();
+                dataGridView2.DataSource = theTietKiems;
+            }
         }
         private void FrmDSSTK_Load(object sender, EventArgs e)
         {
-            //lbnGetEmail.Text = gEmail;
             lbnGetEmail.Text = LoginInfo.UserID;
             lbnKey.Text = Key;
             MaximizeBox = false;
-            MinimizeBox = false;// do data vao datagitbiew ak
+            MinimizeBox = false;
             KetNoiCSDL();
             KetNoiCSDLTatToan();
             TongTien();
-        }
-
-        private void FrmDSSTK_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //DialogResult TL;
-            //TL = MessageBox.Show("Bạn thật sự muốn thoát ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            //if (TL == DialogResult.No)
-            //{
-            //    e.Cancel = true;
-            //}
         }
 
         private void picPlusSTK_Click(object sender, EventArgs e)
@@ -145,7 +134,6 @@ namespace STK
             FRMThemSTK stk = new FRMThemSTK();
             stk.G_Email = lbnGetEmail.Text;
             stk.Show();
-
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -191,10 +179,6 @@ namespace STK
             f.Show();
         }
 
-        void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
         void TongTien()
         {
 
@@ -244,7 +228,7 @@ namespace STK
             cnn.Close();
             return true;
         }
-        string KH;
+        
         private void btnTatToan_Click(object sender, EventArgs e)
         {
             double soTienGui = 0;
@@ -287,7 +271,7 @@ namespace STK
                 try
                 {
                     var tongLai = soTienGui * laiKhongKyHan * kyHan/ 12;
-                    string sql2 = "UPDATE TheTietKiem SET TatToan = 1 , TienLai ='" + tongLai + "' Where ID = '" + k + "' ";
+                    string sql2 = "UPDATE TheTietKiem SET TatToan = 1 , TienLai ='" + tongLai + "' Where ID = '" + lbnKey.Text + "' ";
                     cnn.Open();
                     SqlCommand cmd = new SqlCommand(sql2, cnn);
                     cmd.ExecuteNonQuery();
@@ -346,7 +330,6 @@ namespace STK
                 
             }
         }
-
         private void dataGridView2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (dataGridView2.Columns[e.ColumnIndex].DataPropertyName == "Xem")
@@ -359,7 +342,9 @@ namespace STK
                 }
             }
         }
-
-        
+        private void FrmDSSTK_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

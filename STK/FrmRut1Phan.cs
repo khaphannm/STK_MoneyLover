@@ -162,7 +162,6 @@ namespace STK
             }
             return 0;
         }
-        int a, b;
         public void Rut(float laiSuat)
         {
             try

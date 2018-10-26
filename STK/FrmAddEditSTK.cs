@@ -95,7 +95,7 @@ namespace STK
                     T = MessageBox.Show("Sửa thông tin sổ thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (T == DialogResult.OK)
                     {
-                        this.Close();
+                        Close();
                     }
                 }
                 catch

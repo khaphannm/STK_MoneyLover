@@ -68,6 +68,8 @@
             this.btnTatToan = new System.Windows.Forms.Button();
             this.btnRut1Phan = new System.Windows.Forms.Button();
             this.btnGuiThem = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -90,6 +92,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.progressBar1);
             this.panel1.Controls.Add(this.testMonth);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.lbnSoTienGui);
@@ -358,7 +361,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // picPlusSTK
             // 
@@ -507,6 +509,16 @@
             this.btnGuiThem.UseVisualStyleBackColor = false;
             this.btnGuiThem.Click += new System.EventHandler(this.btnGuiThem_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(17, 49);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 19;
+            // 
+            // backgroundWorker
+            // 
+            // 
             // FrmDSSTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -520,7 +532,7 @@
             this.Name = "FrmDSSTK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách sổ tiết kiệm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDSSTK_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmDSSTK_FormClosed);
             this.Load += new System.EventHandler(this.FrmDSSTK_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -574,5 +586,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayGui;
         private System.Windows.Forms.DataGridViewTextBoxColumn LaiSuat;
         private System.Windows.Forms.DataGridViewButtonColumn Xem;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker;
     }
 }

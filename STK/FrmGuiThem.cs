@@ -32,15 +32,16 @@ namespace STK
         
         private void bthDongY_Click(object sender, EventArgs e)
         {
-            int t = int.Parse(textBox1.Text.ToString());
-            if(t < 100000)
+            try
             {
-                MessageBox.Show("Số tiền tối thiểu phải trên 100.000 VND.");
-            }
-            else
-            { 
-                try
+                int t = int.Parse(textBox1.Text.ToString());
+                if(t < 100000)
                 {
+                    MessageBox.Show("Số tiền tối thiểu phải trên 100.000 VND.");
+                }
+                else
+                { 
+                
                     SqlConnection cnn = Kn();
                     string sql1 = "SELECT SoTienGui FROM TheTietKiem WHERE ID ='" + Key + "'";
                     cnn.Open();
@@ -68,13 +69,11 @@ namespace STK
                         Close();
                     }
                 }
-                catch
-                {
-                    MessageBox.Show("Sửa thông tin thất bại !");
-                }
-
             }
-
+            catch
+            {
+                MessageBox.Show("Có lỗi xảy ra. Vui lòng thử lại !");
+            }
         }
 
         private void FrmGuiThem_FormClosing(object sender, FormClosingEventArgs e)
