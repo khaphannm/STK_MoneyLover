@@ -314,10 +314,11 @@ namespace STK
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                string sql = "select t.MaSo , t.SoTienGui ,t.KyHan,t.NgayGui, t.LaiSuat FROM TheTietKiem t Where Email = '" + lbnGetEmail.Text +
-                "' and TatToan = 1 and t.MaSo = '" + dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString().Trim() + "'";
+                
                 try
                 {
+                    string sql = "select t.MaSo , t.SoTienGui ,t.KyHan,t.NgayGui, t.LaiSuat FROM TheTietKiem t Where Email = '" + lbnGetEmail.Text +
+                "' and TatToan = 1 and t.MaSo = '" + dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString().Trim() + "'";
                     using (var connection = Kn())
                     {
                         var soTietKiem = connection.Query(sql).FirstOrDefault();

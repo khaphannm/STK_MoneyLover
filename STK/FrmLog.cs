@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace STK
 {
-    public partial class FrmSig : Form
+    public partial class FrmLog : Form
     {
-        public FrmSig()
+        public FrmLog()
         {
             InitializeComponent();
         }

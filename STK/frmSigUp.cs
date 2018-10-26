@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace STK
 {
-    public partial class frmLogin : Form
+    public partial class frmSigUp : Form
     {
-        public frmLogin()
+        public frmSigUp()
         {
             InitializeComponent();
         }
@@ -51,7 +51,7 @@ namespace STK
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            FrmSig f = new FrmSig();
+            FrmLog f = new FrmLog();
             f.Show();
         }
         public static bool isEmail(string inputEmail)

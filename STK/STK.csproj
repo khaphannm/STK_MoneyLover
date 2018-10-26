@@ -81,11 +81,11 @@
     <Compile Include="FrmGuiThem.Designer.cs">
       <DependentUpon>FrmGuiThem.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="frmSigUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="frmSigUp.Designer.cs">
+      <DependentUpon>frmSigUp.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -105,11 +105,11 @@
     <Compile Include="FrmRut1Phan.Designer.cs">
       <DependentUpon>FrmRut1Phan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSig.cs">
+    <Compile Include="FrmLog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSig.Designer.cs">
-      <DependentUpon>FrmSig.cs</DependentUpon>
+    <Compile Include="FrmLog.Designer.cs">
+      <DependentUpon>FrmLog.cs</DependentUpon>
     </Compile>
     <Compile Include="FRMThemSTK.cs">
       <SubType>Form</SubType>
@@ -135,8 +135,8 @@
     <EmbeddedResource Include="FrmGuiThem.resx">
       <DependentUpon>FrmGuiThem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="frmSigUp.resx">
+      <DependentUpon>frmSigUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -147,8 +147,8 @@
     <EmbeddedResource Include="FrmRut1Phan.resx">
       <DependentUpon>FrmRut1Phan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSig.resx">
-      <DependentUpon>FrmSig.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLog.resx">
+      <DependentUpon>FrmLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMThemSTK.resx">
       <DependentUpon>FRMThemSTK.cs</DependentUpon>

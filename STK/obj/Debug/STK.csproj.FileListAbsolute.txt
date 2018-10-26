@@ -65,11 +65,9 @@ C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.FrmAddEditSTK.resources
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.FrmDSSTK.resources
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.FrmGuiThem.resources
-C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.frmLogin.resources
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.frmMain.resources
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.FrmAddBank.resources
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.FrmRut1Phan.resources
-C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.FrmSig.resources
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.FRMThemSTK.resources
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.Properties.Resources.resources
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.csproj.GenerateResource.cache
@@ -82,3 +80,5 @@ C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\bin\Debug\STK.
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\bin\Debug\Dapper.dll
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\bin\Debug\Dapper.xml
 C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.csproj.CopyComplete
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.frmSigUp.resources
+C:\Users\Minh Kha\Desktop\C#Project\Repository\STK_MoneyLover\STK\obj\Debug\STK.FrmLog.resources

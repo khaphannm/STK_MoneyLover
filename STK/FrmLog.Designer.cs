@@ -1,6 +1,6 @@
 ﻿namespace STK
 {
-    partial class FrmSig
+    partial class FrmLog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSig));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLog));
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -47,9 +47,10 @@
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(31, 174);
+            this.btnDangNhap.Location = new System.Drawing.Point(46, 268);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(222, 34);
+            this.btnDangNhap.Size = new System.Drawing.Size(333, 52);
             this.btnDangNhap.TabIndex = 8;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
@@ -59,46 +60,53 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(31, 122);
+            this.textBox2.Location = new System.Drawing.Point(46, 188);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(222, 25);
+            this.textBox2.Size = new System.Drawing.Size(331, 33);
             this.textBox2.TabIndex = 7;
+            this.textBox2.Text = "Hung5055";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Blue;
-            this.textBox1.Location = new System.Drawing.Point(31, 81);
+            this.textBox1.Location = new System.Drawing.Point(46, 125);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 22);
+            this.textBox1.Size = new System.Drawing.Size(331, 30);
             this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "dev01@gmail.com";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 22);
+            this.label1.Location = new System.Drawing.Point(156, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 23);
+            this.label1.Size = new System.Drawing.Size(134, 33);
             this.label1.TabIndex = 5;
             this.label1.Text = "Đăng nhập";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 62);
+            this.label2.Location = new System.Drawing.Point(46, 95);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Email";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 106);
+            this.label3.Location = new System.Drawing.Point(42, 163);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Mật khẩu";
             // 
@@ -106,9 +114,10 @@
             // 
             this.hide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hide.Image = ((System.Drawing.Image)(resources.GetObject("hide.Image")));
-            this.hide.Location = new System.Drawing.Point(229, 123);
+            this.hide.Location = new System.Drawing.Point(344, 189);
+            this.hide.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.hide.Name = "hide";
-            this.hide.Size = new System.Drawing.Size(23, 23);
+            this.hide.Size = new System.Drawing.Size(34, 35);
             this.hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.hide.TabIndex = 12;
             this.hide.TabStop = false;
@@ -119,20 +128,21 @@
             // 
             this.view.Cursor = System.Windows.Forms.Cursors.Hand;
             this.view.Image = ((System.Drawing.Image)(resources.GetObject("view.Image")));
-            this.view.Location = new System.Drawing.Point(229, 124);
+            this.view.Location = new System.Drawing.Point(344, 191);
+            this.view.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.view.Name = "view";
-            this.view.Size = new System.Drawing.Size(22, 22);
+            this.view.Size = new System.Drawing.Size(33, 34);
             this.view.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.view.TabIndex = 11;
             this.view.TabStop = false;
             this.view.Click += new System.EventHandler(this.view_Click);
             // 
-            // FrmSig
+            // FrmLog
             // 
             this.AcceptButton = this.btnDangNhap;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 229);
+            this.ClientSize = new System.Drawing.Size(426, 352);
             this.Controls.Add(this.hide);
             this.Controls.Add(this.view);
             this.Controls.Add(this.label3);
@@ -142,9 +152,10 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FrmSig";
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "FrmLog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmSig";
+            this.Text = "Đăng Nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSig_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSig_FormClosed);
             this.Load += new System.EventHandler(this.FrmSig_Load);

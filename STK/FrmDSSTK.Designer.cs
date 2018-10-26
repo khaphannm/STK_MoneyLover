@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDSSTK));
             this.lbnGetEmail = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.testMonth = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,15 +45,6 @@
             this.lbnIntKyHan = new System.Windows.Forms.Label();
             this.lbnKyHan = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNganHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNganHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Xem = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.lbnKey = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -68,8 +60,12 @@
             this.btnTatToan = new System.Windows.Forms.Button();
             this.btnRut1Phan = new System.Windows.Forms.Button();
             this.btnGuiThem = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Xem = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -116,6 +112,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1188, 630);
             this.panel1.TabIndex = 2;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(17, 49);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 19;
             // 
             // testMonth
             // 
@@ -243,14 +246,10 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.MaNganHang,
-            this.TenNganHang,
             this.Xem});
             this.dataGridView2.Location = new System.Drawing.Point(16, 437);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -261,71 +260,6 @@
             this.dataGridView2.TabIndex = 13;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dataGridView2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView2_CellFormatting);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaSo";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Mã sổ";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "SoTienGui";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tổng số tiền gốc";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "KyHan";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Kỳ hạn";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "NgayGui";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Ngày tạo";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "LaiSuat";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Lãi suất";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // MaNganHang
-            // 
-            this.MaNganHang.DataPropertyName = "MaNganHang";
-            this.MaNganHang.HeaderText = "mnh";
-            this.MaNganHang.Name = "MaNganHang";
-            this.MaNganHang.ReadOnly = true;
-            this.MaNganHang.Visible = false;
-            // 
-            // TenNganHang
-            // 
-            this.TenNganHang.DataPropertyName = "TenNganHang";
-            this.TenNganHang.HeaderText = "TNH";
-            this.TenNganHang.Name = "TenNganHang";
-            this.TenNganHang.ReadOnly = true;
-            this.TenNganHang.Visible = false;
-            // 
-            // Xem
-            // 
-            this.Xem.HeaderText = "Xem";
-            this.Xem.Name = "Xem";
-            this.Xem.ReadOnly = true;
             // 
             // label5
             // 
@@ -509,15 +443,39 @@
             this.btnGuiThem.UseVisualStyleBackColor = false;
             this.btnGuiThem.Click += new System.EventHandler(this.btnGuiThem_Click);
             // 
-            // progressBar1
+            // dataGridViewTextBoxColumn2
             // 
-            this.progressBar1.Location = new System.Drawing.Point(17, 49);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
-            this.progressBar1.TabIndex = 19;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaSo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Mã sổ";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // backgroundWorker
+            // dataGridViewTextBoxColumn3
             // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SoTienGui";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Tổng số tiền gốc";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "KyHan";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Kỳ hạn";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "LaiSuat";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Lãi suất";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // Xem
+            // 
+            this.Xem.HeaderText = "Xem";
+            this.Xem.Name = "Xem";
+            this.Xem.ReadOnly = true;
             // 
             // FrmDSSTK
             // 
@@ -565,14 +523,6 @@
         private System.Windows.Forms.Label lbnKey;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNganHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenNganHang;
         private System.Windows.Forms.Label lbnKyHan;
         private System.Windows.Forms.Label lbnIntKyHan;
         private System.Windows.Forms.Label lbnIntKH;
@@ -585,8 +535,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn KyHan;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayGui;
         private System.Windows.Forms.DataGridViewTextBoxColumn LaiSuat;
-        private System.Windows.Forms.DataGridViewButtonColumn Xem;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewButtonColumn Xem;
     }
 }

@@ -21,7 +21,7 @@ namespace STK
         {
             button1.BackColor = Color.White;
             button1.ForeColor = Color.Green;
-            frmLogin f1 = new frmLogin();
+            frmSigUp f1 = new frmSigUp();
             f1.Show();
             this.Hide();
 
@@ -47,7 +47,7 @@ namespace STK
         {
             button2.BackColor = Color.White;
             button2.ForeColor = Color.Green;
-            FrmSig fs = new FrmSig();
+            FrmLog fs = new FrmLog();
             fs.Show();
             this.Hide();
  
