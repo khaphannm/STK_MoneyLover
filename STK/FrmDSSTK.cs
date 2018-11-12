@@ -24,6 +24,7 @@ namespace STK
         }
         public string GEmail { get; set; }
         public string Key { get; set; }
+        public int Month { get; set; }
         private List<TheTietKiem> TheTietKiems { get; set; }
         public SqlConnection Kn()
         {
@@ -143,7 +144,11 @@ namespace STK
                 DataGridViewRow row = new DataGridViewRow();
                 row = dataGridView1.Rows[e.RowIndex];
                 lbnKey.Text = row.Cells[0].Value.ToString();
-                lbnKyHan.Text = row.Cells[3].Value.ToString();
+                if (lbnKey.Text == "0")
+                {
+                    return;
+                }
+                lbnKyHan.Text = row.Cells[9].Value.ToString();
                 if (lbnKyHan.Text == "Không kỳ hạn")
                 {
                     lbnIntKyHan.Text = "0";
@@ -164,15 +169,20 @@ namespace STK
                 {
                     lbnIntKyHan.Text = "12";
                 }
-            } catch (Exception)
+            } catch (Exception ex)
             {
-                return;
+                MessageBox.Show(ex.Message);
             }
             
         }
 
         void btnEdit_Click(object sender, EventArgs e)
         {
+            if (lbnKey.Text == "0")
+            {
+                MessageBox.Show("Vui lòng click chọn sổ tiết kiệm!");
+                return;
+            }
             var key = dataGridView1.SelectedRows[0].Cells[0].Value;
             var email = GEmail;
             FrmAddEditSTK f = new FrmAddEditSTK() { Key = key.ToString() };
@@ -181,7 +191,6 @@ namespace STK
 
         void TongTien()
         {
-
             SqlConnection cnn = Kn();
             string sql1 = "SELECT SUM(SoTienGui)  FROM TheTietKiem WHERE Email='" + lbnGetEmail.Text + "' and TatToan = 0";
             cnn.Open();
@@ -190,13 +199,18 @@ namespace STK
             if (dr.Read())
             {
                 string f = dr[0].ToString();
-                string ff = String.Format("{0:0,0}", dr[0].ToString());
+                string ff = string.Format("{0:0,0}", dr[0].ToString());
                 lbnTongTien.Text= ff;                
             }
-            
+            cnn.Close();
         }
         void btnGuiThem_Click(object sender, EventArgs e)
         {
+            if (lbnKey.Text == "0")
+            {
+                MessageBox.Show("Vui lòng click chọn sổ tiết kiệm!");
+                return;
+            }
             var key = dataGridView1.SelectedRows[0].Cells[0].Value;
             FrmGuiThem f = new FrmGuiThem() { Key = key.ToString() };
             f.Owner = this;
@@ -204,23 +218,22 @@ namespace STK
         }
         bool getMonth()
         {
-            int month;
             DateTime Time1, Time2;
             TimeSpan nowtime;
             SqlConnection cnn = Kn();
             cnn.Open();
             string sql = "SELECT NgayGui FROM TheTietKiem WHERE ID = '" + lbnKey.Text + "'";
             SqlCommand cm = new SqlCommand(sql, cnn);
-            SqlDataReader dr = cm.ExecuteReader(); ;
+            SqlDataReader dr = cm.ExecuteReader();
 
             if(dr.Read())
             {
                 Time1 = Convert.ToDateTime(dr[0].ToString());
                 int a = Time1.Month;
-                Time2 = Convert.ToDateTime(DateTime.Now.ToString());
+                Time2 = DateTime.Now;
                 nowtime = Time2.Subtract(Time1);
-                month = nowtime.Days / 30;
-                if(month < int.Parse(lbnIntKyHan.Text))
+                Month = nowtime.Days / 30;
+                if(Month < int.Parse(lbnIntKyHan.Text) || int.Parse(lbnIntKyHan.Text) == 0)
                 {
                     return false;
                 }
@@ -231,46 +244,50 @@ namespace STK
         
         private void btnTatToan_Click(object sender, EventArgs e)
         {
+            if (lbnKey.Text == "0")
+            {
+                MessageBox.Show("Vui lòng click chọn sổ tiết kiệm!");
+                return;
+            }
             double soTienGui = 0;
             double laiKhongKyHan = 0;
-            double kyHan = 0;
-            SqlConnection cnn = Kn();
-            if (getMonth() == true)
-            {
-                try
+            double laiSuat = 0;
+            double tongLai = 0;
+            try
+            { 
+                SqlConnection cnn = Kn();
+                string sql = "SELECT SoTienGui,LaiSuat, LaiKhongKyHan FROM TheTietKiem WHERE ID = '" + lbnKey.Text + "'";
+                cnn.Open();
+                SqlCommand cm = new SqlCommand(sql, cnn);
+                SqlDataReader dr = cm.ExecuteReader();
+                if (dr.Read())
                 {
-                    string sql = "SELECT SoTienGui,LaiSuat, LaiKhongKyHan FROM TheTietKiem WHERE ID = '" + lbnKey.Text + "'";
+                    // Tinh toan
+                    soTienGui = double.Parse(dr[0].ToString());
+                    laiSuat = double.Parse(dr[1].ToString());
+                    laiKhongKyHan = double.Parse(dr[2].ToString());
+                }
+                else
+                {
+                    return;
+                }
+                cnn.Close();
+                if (getMonth() == true) // Nếu đúng thời hạn rút
+                {
+                    tongLai = soTienGui * laiSuat / 100 * Month / 12;    
+                    // Update
+                    string sql2 = "UPDATE TheTietKiem SET TatToan = 1 , TienLai ='" + tongLai + "' Where ID = '" + lbnKey.Text + "' ";
                     cnn.Open();
-                    SqlCommand cm = new SqlCommand(sql, cnn);
-                    SqlDataReader dr = cm.ExecuteReader();
-                    if (dr.Read())
-                    {
-                        soTienGui = double.Parse(dr[0].ToString());
-                        var LS = double.Parse(dr[1].ToString());
-                        laiKhongKyHan = double.Parse(dr[2].ToString());
-                        cnn.Close();
-                        kyHan = double.Parse(lbnIntKH.Text);
-                        var tongLai = soTienGui * LS/100 * kyHan / 12;
-                        string sql2 = "UPDATE TheTietKiem SET TatToan = 1 , TienLai ='" + tongLai + "' Where ID = '" + lbnKey.Text + "' ";
-                        cnn.Open();
-                        SqlCommand cmd = new SqlCommand(sql2, cnn);
-                        cmd.ExecuteNonQuery();
-                        cnn.Close();
-                        DialogResult T;
-                        T = MessageBox.Show("Tất toán sổ thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-
+                    SqlCommand cmd = new SqlCommand(sql2, cnn);
+                    cmd.ExecuteNonQuery();
+                    cnn.Close();
+                    // Thông báo
+                    DialogResult T;
+                    T = MessageBox.Show("Tất toán sổ thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Không tất toán được !");
-                }
-            }
-            else
-            {
-                try
-                {
-                    var tongLai = soTienGui * laiKhongKyHan * kyHan/ 12;
+                    tongLai = Math.Round(soTienGui * laiKhongKyHan / 100 * Month / 12, 0);
                     string sql2 = "UPDATE TheTietKiem SET TatToan = 1 , TienLai ='" + tongLai + "' Where ID = '" + lbnKey.Text + "' ";
                     cnn.Open();
                     SqlCommand cmd = new SqlCommand(sql2, cnn);
@@ -279,15 +296,19 @@ namespace STK
                     DialogResult T;
                     T = MessageBox.Show("Tất toán sổ thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch
-                {
-                    MessageBox.Show("Không tất toán được !");
-                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnRut1Phan_Click(object sender, EventArgs e)
         {
+            if (lbnKey.Text == "0")
+                {
+                    MessageBox.Show("Vui lòng click chọn sổ tiết kiệm!");
+                    return;
+                }
             var k = dataGridView1.SelectedRows[0].Cells[0].Value;
             FrmRut1Phan r = new FrmRut1Phan() { GKey = k.ToString()};
             r.Owner = this;
