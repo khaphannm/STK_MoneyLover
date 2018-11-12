@@ -66,14 +66,7 @@ namespace STK
         
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult TL;
-            TL = MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (TL == DialogResult.No)
-            {
-                e.Cancel = true;
-                Application.Exit();
-                //Application.ExitThread();
-            }
+            
         }
         
         private void button1_KeyPress(object sender, KeyPressEventArgs e)
@@ -85,6 +78,18 @@ namespace STK
         private void button3_Click(object sender, EventArgs e)
         {
  
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult TL;
+            TL = MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (TL == DialogResult.Yes)
+            {
+                Application.Exit();
+                //Application.ExitThread();
+            }
+            
         }
     }
 }

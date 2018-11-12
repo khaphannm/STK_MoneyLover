@@ -246,6 +246,7 @@ namespace STK
                     else
                     {
                         Rut(laiKhongKyHan);
+                        Close();
                     }
                 }
                 else
@@ -259,11 +260,13 @@ namespace STK
                             soTienGui = soTienGui,
                             laiKhongKyHan = laiKhongKyHan
                         };
+                        f.Owner = this;
                         f.Show();
                     }
                     else
                     {
                         Rut(laiSuat);
+                        Close();
                     }
                 }
 
@@ -272,7 +275,7 @@ namespace STK
             {
                 MessageBox.Show("Số dư hiện không đủ để thực hiện giao dịch này !");
             }
-            Close();
+            
         }
     }
 }

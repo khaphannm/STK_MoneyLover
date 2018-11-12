@@ -284,6 +284,7 @@
             this.Name = "fmrXN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmrXN";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fmrXN_FormClosing);
             this.Load += new System.EventHandler(this.fmrXN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

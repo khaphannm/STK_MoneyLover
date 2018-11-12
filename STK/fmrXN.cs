@@ -107,7 +107,7 @@ namespace STK
                 string sql2 = "UPDATE TheTietKiem SET SoTienGui=@tienSauKhiRut Where ID ='" + lbnMaSo.Text + "'";
                 cnn.Open();
                 SqlCommand cmd = new SqlCommand(sql2, cnn);
-                cmd.Parameters.AddWithValue("@tienSauKhiRut", (float)tienRut);
+                cmd.Parameters.AddWithValue("@tienSauKhiRut", (float)(soTienGui - tienRut));
                 cmd.ExecuteNonQuery();
                 cnn.Close();
 
@@ -126,6 +126,12 @@ namespace STK
         private void lblAccept_Click(object sender, EventArgs e)
         {
             RutTruocKyHan();
+        }
+
+        private void fmrXN_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason != CloseReason.FormOwnerClosing)
+                Owner.Hide();
         }
     }
 }
